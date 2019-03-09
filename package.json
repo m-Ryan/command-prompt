@@ -1,0 +1,26 @@
+{
+  "name": "command-prompt",
+  "version": "0.0.1",
+  "description": "command-prompt",
+  "author": "ryan",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/inquirer": "^0.0.44",
+    "inquirer": "^6.2.2",
+    "typescript": "^3.3.3333"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:m-Ryan/command-prompt.git"
+  },
+  "keywords": [
+    "prompts",
+    "prompt",
+    "command-line",
+    "command"
+  ]
+}
