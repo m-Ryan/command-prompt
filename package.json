@@ -1,12 +1,13 @@
 {
   "name": "command-prompt",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "command-prompt",
   "author": "ryan",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "node test/index.js"
   },
   "dependencies": {
     "@types/inquirer": "^0.0.44",

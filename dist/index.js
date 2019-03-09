@@ -66,6 +66,11 @@ function promptItemAdapter(basePrompt) {
                     }
                 });
             }
+            else {
+                var callback_1 = function () { return selectChoice(prompItem); };
+                var method_1 = item.method;
+                item.method = function () { return method_1(callback_1); };
+            }
             promptItemAdapter(item);
         });
     }
@@ -103,4 +108,4 @@ function isPromptItem(promptItem) {
 function isBasePromptItem(promptBaseItem) {
     return promptBaseItem.choices !== undefined;
 }
-//# sourceMappingURL=command-prompt.js.map
+//# sourceMappingURL=index.js.map

@@ -7,7 +7,7 @@ export interface IpromptItem {
 export interface IpromptChildItem {
 	type: string;
 	name: string;
-	method: () => void;
+	method: (again?: () => any) => void;
 }
 
 export type IQuestion = IpromptItem | IpromptChildItem;
@@ -19,7 +19,7 @@ export interface IBasepromptItem {
 
 export interface IBasepromptChildItem {
 	name: string;
-	method: () => void;
+	method: (again?: () => any) => void;
 }
 
 export type IBaseQuestion = IBasepromptItem | IBasepromptChildItem;

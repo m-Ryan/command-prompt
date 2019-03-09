@@ -25,6 +25,10 @@ function promptItemAdapter(basePrompt: IBaseQuestion): IQuestion {
 						selectChoice(prompItem);
 					}
 				});
+			} else {
+				const callback = () => selectChoice(prompItem);
+				const method = item.method;
+				item.method = () => method(callback);
 			}
 			promptItemAdapter(item);
 		});

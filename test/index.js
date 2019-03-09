@@ -1,52 +1,27 @@
-# command-prompt
-
----
-
-Install
----
-
-```js
-npm install --save command-prompt
-
-```
-
-```js
-yarn add command-prompt
-
-```
-
-Usage
-
----
-
-```js
-import commandPrompt from 'command-prompt';
+const commandPrompt = require('../dist/index').default;
 
 const options = {
 	name: 'choose your project',
-	choices: [
-		{
+	choices: [{
 			name: 'project1',
-			choices: [
-				{
+			choices: [{
 					name: 'clone project',
-					method() {
+					method(again) {
 						console.log('git clone.....');
+						again();
 					}
 				},
 				{
 					name: 'fetch project',
-					method(again) {
+					method() {
 						console.log('git fetch.....');
-						again();
 					}
 				}
 			]
 		},
 		{
 			name: 'project2',
-			choices: [
-				{
+			choices: [{
 					name: 'clone project',
 					method() {
 						console.log('git clone.....');
@@ -65,13 +40,6 @@ const options = {
 			method: () => process.exit()
 		}
 	]
-}
+};
 
 commandPrompt(options);
-
-
-```
-
-![图片1](http://assets.maocanhua.cn/Fv1Q8rp-DfmC1El1zs0OPnzAf2S4) 
-![图片1](http://assets.maocanhua.cn/Fm87DgOcCLI1KQMKiCnH64TRtUug) 
-![图片1](http://assets.maocanhua.cn/FtoOaB5TRP76BiI16zeBwGqhAjIv) 
